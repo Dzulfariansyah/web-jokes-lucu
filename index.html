@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Web Jokes Lucu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fffae6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+      min-height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      color: #f57c00;
+      margin-bottom: 20px;
+    }
+    #joke {
+      font-size: 1.3em;
+      margin: 20px 0;
+      max-width: 600px;
+      text-align: center;
+      color: #333;
+    }
+    button {
+      background: #f57c00;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.1em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #d46a00;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Web Jokes Lucu</h1>
+  <div id="joke">Klik tombol di bawah untuk lihat jokes lucu!</div>
+  <button onclick="showJoke()">Tampilkan Jokes</button>
+
+  <script>
+    const jokes = [
+      "Kenapa komputer nggak bisa makan? Karena dia takut kena virus!",
+      "Kenapa programmer selalu bingung antara Halloween dan Natal? Karena Oct 31 = Dec 25.",
+      "Apa yang terjadi kalau kucing jadi programmer? Dia selalu debug.",
+      "Kenapa JavaScript itu seperti kopi? Karena keduanya bisa bikin kamu melek semalaman!",
+      "Kenapa jerapah suka pakai dasi? Karena dia mau tampil formal!",
+      "Apa bedanya kucing sama programmer? Kucing ngejar tikus, programmer ngejar bugs.",
+      "Kenapa browser nggak bisa bohong? Karena dia selalu cache data.",
+      "Apa yang dikatakan keyboard ke komputer? 'You complete me!'",
+      "Kenapa server sering sakit? Karena dia kelelahan melayani request.",
+      "Apa yang terjadi kalau kamu ngoding sambil minum kopi? Bug-nya jadi lebih semangat!"
+    ];
+
+    function showJoke() {
+      const randomIndex = Math.floor(Math.random() * jokes.length);
+      document.getElementById('joke').textContent = jokes[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
